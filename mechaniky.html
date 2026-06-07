@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0005" />
+  <meta name="color-scheme" content="dark" />
+  
+  <!-- ═══════════════════════════════
+       TITLE & DESCRIPTION — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <title>Mechaniky — BODY GUARD | Herní Systémy</title>
+  <meta name="description" content="Přehled herních mechanik hry BODY GUARD — těžba, budování věží, crafting, AI nepřátelé, boss fighty a unikátní systém obtížnosti. Naučte se, jak se hra hraje." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical — SPECIFICKÉ PRO TUTO STRÁNKU -->
+  <link rel="canonical" href="https://body-guard-soc.cz/mechaniky.html" />
+
+  <!-- ═══════════════════════════════
+       SOCIÁLNÍ SÍTĚ — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <meta property="og:title" content="Mechaniky — BODY GUARD | Herní Systémy" />
+  <meta property="og:description" content="Jak se BODY GUARD hraje — těžba, věže, crafting, AI nepřátelé a boss fighty. Plný přehled herních mechanik." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://body-guard-soc.cz/mechaniky.html" />
+  <meta property="og:image" content="https://body-guard-soc.cz/og-image.png" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mechaniky — BODY GUARD | Herní Systémy" />
+  <meta name="twitter:description" content="Podrobný přehled herních mechanik — těžba, crafting, AI a boss fighty v srdci." />
+  <meta name="twitter:image" content="https://body-guard-soc.cz/og-image.png" />
+
+  <!-- SEO Meta -->
+  <meta name="author" content="Ondra Glacner" />
+  <meta name="keywords" content="mechaniky, hra, těžba, crafting, AI nepřátelé, věže, obtížnost, gameplay" />
+
+  <!-- ═══════════════════════════════
+       OPTIMALIZACE
+  ═══════════════════════════════ -->
+  <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ═══════════════════════════════
+       KRITICKÉ FONTY — PRELOAD (bez CLS)
+  ═══════════════════════════════ -->
+  <link rel="preload" 
+        href="fonts/subset-RussoOne-Regular.woff2"  
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/Orbitron-Regular.woff2"         
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-Inter-Regular.woff2"     
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Regular.woff2" 
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Bold.woff2"    
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🫀%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ctext y='1em' font-size='160'%3E🫀%3C/text%3E%3C/svg%3E" />
+
+  <!-- ═══════════════════════════════
+       STRUKTUROVANÁ DATA (Schema.org JSON-LD)
+  ═══════════════════════════════ -->
+  
+  <!-- WebSite — domovská stránka webu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BODY GUARD",
+    "url": "https://body-guard-soc.cz",
+    "description": "BODY GUARD je interaktivní 3D hra o imunitním systému. Projekt Středoškolské odborné činnosti 2026.",
+    "inLanguage": "cs",
+    "creator": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    }
+  }
+  </script>
+
+  <!-- WebPage — specifická stránka -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mechaniky — BODY GUARD",
+    "url": "https://body-guard-soc.cz/mechaniky.html",
+    "description": "Herní mechaniky BODY GUARD — těžba, budování věží, crafting, AI nepřátelé a boss fighty.",
+    "inLanguage": "cs",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "BODY GUARD",
+      "url": "https://body-guard-soc.cz"
+    }
+  }
+  </script>
+
+  <!-- VideoGame — hra jako schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "BODY GUARD",
+    "url": "https://body-guard-soc.cz/mechaniky.html",
+    "description": "3D voxel hra odehrávající se uvnitř lidského srdce s mechaniky těžby, craftingu a boje s AI nepřáteli.",
+    "gameplayMode": ["SinglePlayer"],
+    "gamePlatform": "PC",
+    "applicationCategory": "GameApplication",
+    "inLanguage": "cs",
+    "author": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    },
+    "featureList": [
+      "Mining System",
+      "Tower Building",
+      "Crafting System",
+      "AI Enemies",
+      "Boss Fights",
+      "Difficulty Modes",
+      "Educational Mode",
+      "Health & Healing"
+    ]
+  }
+  </script>
+
+  <!-- CSS — bez inline, pro lepší caching -->
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       ♿ SKIP-TO-CONTENT — WCAG 2.2 AA
+  ═══════════════════════════════ -->
+  <a href="#main-content"
+     class="skip-to-main"
+     style="
+       position: absolute;
+       top: -100%;
+       left: 1rem;
+       background: var(--accent);
+       color: #000;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-family: var(--font-mono);
+       font-size: 0.85rem;
+       font-weight: 700;
+       z-index: 9999;
+       text-decoration: none;
+       transition: top 0.2s ease;
+     "
+     onfocus="this.style.top='1rem'"
+     onblur="this.style.top='-100%'"
+  >Přeskočit na&nbsp;obsah</a>
+
+  <!-- ═══════════════════════════════
+       HEADER s&nbsp;NAVIGACÍ — F-PATTERN (top bar)
+  ═══════════════════════════════ -->
+  <header class="site-header" id="siteHeader" aria-label="Hlavička webu">
+    <div class="site-header__inner">
+
+      <!-- Logo / Home link -->
+      <a href="index.html" 
+         class="site-header__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="BODY GUARD — Domů">
+        BODY GUARD
+      </a>
+
+      <!-- Primární navigace — F-PATTERN (7 položek) -->
+      <nav class="site-nav" 
+           id="siteNav" 
+           aria-label="Hlavní navigace">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" 
+               class="site-nav__link" 
+               title="Domů">
+              Domů
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="o-hre.html" 
+               class="site-nav__link"
+               title="Přečti si více o hře">
+              O&nbsp;hře
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="mechaniky.html" 
+               class="site-nav__link site-nav__link--active"
+               aria-current="page"
+               title="Jak se hra hraje">
+              Mechaniky
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvoj.html" 
+               class="site-nav__link"
+               title="Stav vývoje projektu">
+              Vývoj
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="media.html" 
+               class="site-nav__link"
+               title="Screenshoty a videa">
+              Media
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="edukace.html" 
+               class="site-nav__link"
+               title="Vzdělávací aspekt hry">
+              Edukace
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvojar.html" 
+               class="site-nav__link"
+               title="Informace o vývojáři">
+              Vývojář
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ♿ Hamburger menu — 44x44px minimum -->
+      <button class="hamburger"
+              id="hamburger"
+              type="button"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Otevřít navigační menu">
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════
+       HLAVNÍ OBSAH — Z-PATTERN
+  ═══════════════════════════════ -->
+  <main class="site-main" id="main-content" tabindex="-1" aria-label="Hlavní obsah webu">
+
+    <!-- ─────────────────────────────
+         PAGE HERO — Z-PATTERN
+    ───────────────────────────────── -->
+    <section class="page-hero" 
+             aria-labelledby="page-title">
+
+      <p class="page-hero__eyebrow">
+        Gameplay
+      </p>
+
+      <h1 class="page-hero__title" id="page-title">
+        Herní <span class="highlight">mechaniky</span>
+      </h1>
+
+      <p class="page-hero__description">
+        Detailní pohled na&nbsp;život uvnitř srdce&nbsp;— od&nbsp;těžby organického materiálu 
+        přes budování obranných věží až&nbsp;po&nbsp;střet s&nbsp;<strong>boss nepřáteli</strong>.
+      </p>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- ─────────────────────────────
+         1. HERNÍ SYSTÉMY — F-PATTERN
+    ───────────────────────────────── -->
+    <section class="page-section" 
+             aria-labelledby="systems-title" 
+             aria-label="Přehled herních systémů">
+
+      <span class="section-label reveal">Klíčové prvky</span>
+
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="systems-title">
+          Hlavní herní <span class="section-title__highlight">systémy</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+
+      <p class="section-intro reveal">
+        Devět vzájemně propojených systémů vytváří komplexní herní zážitek. 
+        Smyčka <strong>Těžba&nbsp;→&nbsp;Crafting&nbsp;→&nbsp;Boj</strong> 
+        je&nbsp;navržena s&nbsp;ohledem na&nbsp;reálné biologické procesy a&nbsp;vědecká fakta.
+      </p>
+
+      <ul class="features-grid" aria-label="Přehled herních systémů">
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Těžba</h3>
+          <p class="card__text">
+            Získávání surovin přímo ze&nbsp;stěn srdečních komor&nbsp;— od&nbsp;cholesterolu a&nbsp;plaku 
+            až&nbsp;po&nbsp;krevní sraženiny. Každý materiál má&nbsp;specifické využití v&nbsp;následné výrobě.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Budování věží</h3>
+          <p class="card__text">
+            Konstrukce obranných struktur a&nbsp;bariér. Věže eliminují hrozby na&nbsp;biologické, 
+            chemické nebo fyzikální bázi, podobně jako skutečné složky imunitního systému.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Inventář a&nbsp;crafting</h3>
+          <p class="card__text">
+            Zpracování surovin na&nbsp;zbraně, enzymy a&nbsp;protilátky. Systém výroby reflektuje 
+            skutečné procesy, jako je&nbsp;fagocytóza nebo neutralizace patogenů.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">AI Nepřátelé</h3>
+          <p class="card__text">
+            Bakterie, viry a&nbsp;mutující buňky s&nbsp;vlastním chováním a&nbsp;strategií útoku. 
+            Využívají pokročilou navigaci v&nbsp;dynamicky se&nbsp;měnícím prostředí.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Zdraví a&nbsp;regenerace</h3>
+          <p class="card__text">
+            Správa životní energie a&nbsp;využívání nutričních stanic. Hráč mustí aktivně 
+            udržovat homeostázu pomocí vyrobených léčiv a&nbsp;biologických bonusů.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Průzkum zón</h3>
+          <p class="card__text">
+            Navigace skrze síně, komory a&nbsp;chlopně. Každá část srdce představuje 
+            unikátní biom s&nbsp;odlišnými typy nepřátel a&nbsp;vzácností surovin.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Dynamické prostředí</h3>
+          <p class="card__text">
+            Svět pulzuje v&nbsp;rytmu srdečního tepu. Mechanické vlivy krevního toku mohou 
+            ovlivnit pohyb hráče, odhodit nepřátele nebo zpřístupnit skryté cesty.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Boss fighty</h3>
+          <p class="card__text">
+            Střety s&nbsp;masivními patogeny na&nbsp;konci každé oblasti. Vítězství vyžaduje 
+            pochopení jejich mechanik a&nbsp;přípravu specifické sady vybavení.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Vývoj postavy</h3>
+          <p class="card__text">
+            Zlepšování schopností bílé krvinky. Postupem hrou odemykáte vyšší rychlost, 
+            odolnost nebo speciální aury, které pasivně oslabují okolní viry.
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- ─────────────────────────────
+         2. GAME LOOP — F-PATTERN (horizontální varianta)
+    ───────────────────────────────── -->
+    <section class="page-section page-section--tinted" 
+             aria-labelledby="loop-title" 
+             aria-label="Herní smyčka">
+
+      <span class="section-label reveal">Core Loop</span>
+      
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="loop-title">
+          Jak hra <span class="section-title__highlight">funguje</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+
+      <p class="section-intro reveal">
+        Každá herní relace sleduje intuitivní cyklus&nbsp;— 
+        <strong>průzkum&nbsp;→&nbsp;těžba&nbsp;→&nbsp;výroba&nbsp;→&nbsp;obrana&nbsp;→&nbsp;postup</strong>. 
+        S&nbsp;každou další úrovní se&nbsp;prostředí stává nebezpečnějším a&nbsp;biologické procesy komplexnějšími.
+      </p>
+
+      <ol class="loop-grid reveal" aria-label="Herní smyčka — 5 kroků">
+
+        <li class="loop-step">
+          <span class="loop-step__number" aria-hidden="true">01</span>
+          <span class="loop-step__icon" aria-hidden="true"></span>
+          <h3 class="loop-step__title">Průzkum</h3>
+          <p class="loop-step__desc">Mapování srdeční komory a&nbsp;vyhledávání ložisek surovin.</p>
+        </li>
+
+        <li class="loop-arrow" aria-hidden="true">→</li>
+
+        <li class="loop-step">
+          <span class="loop-step__number" aria-hidden="true">02</span>
+          <span class="loop-step__icon" aria-hidden="true"></span>
+          <h3 class="loop-step__title">Těžba</h3>
+          <p class="loop-step__desc">Sběr organických bloků, cholesterolu a&nbsp;tkání ze&nbsp;stěn.</p>
+        </li>
+
+        <li class="loop-arrow" aria-hidden="true">→</li>
+
+        <li class="loop-step">
+          <span class="loop-step__number" aria-hidden="true">03</span>
+          <span class="loop-step__icon" aria-hidden="true"></span>
+          <h3 class="loop-step__title">Výroba</h3>
+          <p class="loop-step__desc">Syntéza protilátek a&nbsp;příprava obranných biologických věží.</p>
+        </li>
+
+        <li class="loop-arrow" aria-hidden="true">→</li>
+
+        <li class="loop-step">
+          <span class="loop-step__number" aria-hidden="true">04</span>
+          <span class="loop-step__icon" aria-hidden="true"></span>
+          <h3 class="loop-step__title">Obrana</h3>
+          <p class="loop-step__desc">Aktivní boj s&nbsp;patogeny a&nbsp;ochrana poškozených částí srdce.</p>
+        </li>
+
+        <li class="loop-arrow" aria-hidden="true">→</li>
+
+        <li class="loop-step">
+          <span class="loop-step__number" aria-hidden="true">05</span>
+          <span class="loop-step__icon" aria-hidden="true"></span>
+          <h3 class="loop-step__title">Postup</h3>
+          <p class="loop-step__desc">Přechod do&nbsp;další anatomické zóny s&nbsp;vyšším rizikem.</p>
+        </li>
+
+      </ol>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- ─────────────────────────────
+         3. OBTÍŽNOST = NEMOC — Z-PATTERN
+    ───────────────────────────────── -->
+    <section class="page-section" 
+             aria-labelledby="difficulty-title" 
+             aria-label="Úrovně obtížnosti">
+
+      <span class="section-label reveal">Propojení s&nbsp;realitou</span>
+
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="difficulty-title">
+          Obtížnost jako <span class="section-title__highlight">diagnóza</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+
+      <p class="section-intro reveal">
+        Volba obtížnosti přímo definuje stav organismu. Čím vyšší úroveň zvolíte, 
+        tím agresivnější, rychlejší a&nbsp;odolnější patogeny v&nbsp;srdci narazíte. 
+        Každý herní režim vychází z&nbsp;reálných lékařských poznatků.
+      </p>
+
+      <ul class="difficulty-grid reveal" aria-label="Úrovně obtížnosti">
+
+        <li class="diff-card diff-card--easy">
+          <span class="diff-card__status-indicator" aria-hidden="true"></span>
+          <span class="diff-card__level">Lehká</span>
+          <h3 class="diff-card__disease">Virová infekce</h3>
+          <p class="diff-card__desc">
+            Pomalý nástup symptomů a&nbsp;nižší počet útočníků. Tato úroveň je 
+            vhodná pro&nbsp;studium základních mechanik imunitní odezvy.
+          </p>
+        </li>
+
+        <li class="diff-card diff-card--medium">
+          <span class="diff-card__status-indicator" aria-hidden="true"></span>
+          <span class="diff-card__level">Střední</span>
+          <h3 class="diff-card__disease">Bakteriální zánět</h3>
+          <p class="diff-card__desc">
+            Akutní stav vyžadující rychlou reakci. Nepřátelé útočí v&nbsp;početnějších 
+            vlnách a&nbsp;vynucují si&nbsp;aktivní budování obranných struktur.
+          </p>
+        </li>
+
+        <li class="diff-card diff-card--hard">
+          <span class="diff-card__status-indicator" aria-hidden="true"></span>
+          <span class="diff-card__level">Těžká</span>
+          <h3 class="diff-card__disease">Srdeční selhání</h3>
+          <p class="diff-card__desc">
+            Kritické poškození tkáně. Hráč musí bojovat s&nbsp;časem a&nbsp;současně 
+            opravovat srdeční stěnu, aby zabránil totálnímu kolapsu systému.
+          </p>
+        </li>
+
+        <li class="diff-card diff-card--extreme">
+          <span class="diff-card__status-indicator" aria-hidden="true"></span>
+          <span class="diff-card__level">Nejtěžší</span>
+          <h3 class="diff-card__disease">Rakovina</h3>
+          <p class="diff-card__desc">
+            Extrémní scénář, kde patogeny mutují a&nbsp;nekontrolovaně se&nbsp;množí. 
+            Přežití vyžaduje bezchybnou strategii a&nbsp;pokročilou znalost craftingu.
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- ─────────────────────────────
+         4. OVLÁDÁNÍ — F-PATTERN
+    ───────────────────────────────── -->
+    <section class="page-section page-section--tinted" 
+             aria-labelledby="controls-title"
+             aria-label="Ovládání hry">
+
+      <span class="section-label reveal">Jak se&nbsp;hraje</span>
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="controls-title">
+          <span class="section-title__highlight">Ovládání</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+      
+      <p class="section-intro reveal">
+        Standardní FPS ovládání, rozšířené&nbsp;herní mechaniky.
+        <strong>Všechny klávesy jsou plně přizpůsobitelné</strong>
+        v&nbsp;nastavení hry.
+      </p>
+
+      <div class="controls-grid">
+
+        <div class="controls-group reveal">
+          <h3 class="controls-group__title">Pohyb</h3>
+          <dl class="control-list">
+
+            <div class="control-row">
+              <span class="control-row__action">Pohyb vpřed / vzad / do&nbsp;stran</span>
+              <span class="control-row__key">
+                <kbd class="key">W</kbd>
+                <kbd class="key">A</kbd>
+                <kbd class="key">S</kbd>
+                <kbd class="key">D</kbd>
+              </span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Skok</span>
+              <span class="control-row__key"><kbd class="key">SPACE</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Sprint</span>
+              <span class="control-row__key"><kbd class="key">SHIFT</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Dřep / Plížení</span>
+              <span class="control-row__key"><kbd class="key">CTRL</kbd></span>
+            </div>
+
+          </dl>
+        </div>
+
+        <div class="controls-group reveal">
+          <h3 class="controls-group__title">Interakce</h3>
+          <dl class="control-list">
+
+            <div class="control-row">
+              <span class="control-row__action">Těžba / Útok</span>
+              <span class="control-row__key"><kbd class="key">LMB</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Stavění / Použití</span>
+              <span class="control-row__key"><kbd class="key">RMB</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Otevřít inventář</span>
+              <span class="control-row__key"><kbd class="key">E</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Otevřít crafting</span>
+              <span class="control-row__key"><kbd class="key">C</kbd></span>
+            </div>
+
+          </dl>
+        </div>
+
+        <div class="controls-group reveal">
+          <h3 class="controls-group__title">Předměty</h3>
+          <dl class="control-list">
+
+            <div class="control-row">
+              <span class="control-row__action">Hotbar sloty 1–6</span>
+              <span class="control-row__key">
+                <kbd class="key">1</kbd>–<kbd class="key">6</kbd>
+              </span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Použít předmět</span>
+              <span class="control-row__key"><kbd class="key">F</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Hodit předmět</span>
+              <span class="control-row__key"><kbd class="key">Q</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Scrollovat hotbar</span>
+              <span class="control-row__key"><kbd class="key">SCROLL</kbd></span>
+            </div>
+
+          </dl>
+        </div>
+
+        <div class="controls-group reveal">
+          <h3 class="controls-group__title">Ostatní</h3>
+          <dl class="control-list">
+
+            <div class="control-row">
+              <span class="control-row__action">Mapa zón</span>
+              <span class="control-row__key"><kbd class="key">M</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Pauza / Menu</span>
+              <span class="control-row__key"><kbd class="key">ESC</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Vzdělávací mód</span>
+              <span class="control-row__key"><kbd class="key">TAB</kbd></span>
+            </div>
+
+            <div class="control-row">
+              <span class="control-row__action">Screenshot</span>
+              <span class="control-row__key"><kbd class="key">F12</kbd></span>
+            </div>
+
+          </dl>
+        </div>
+
+      </div>
+
+      <p class="controls-note reveal">
+         Ovládání je&nbsp;plně přizpůsobitelné v&nbsp;nastavení hry
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════
+       FOOTER — Kontaktní informace a&nbsp;copyright
+  ═══════════════════════════════ -->
+  <footer class="site-footer" aria-label="Patička webu">
+    <div class="site-footer__inner">
+
+      <a href="index.html" 
+         class="site-footer__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="Domů">
+        BODY GUARD
+      </a>
+
+      <p class="site-footer__tagline">Inside the Human Heart · SOČ&nbsp;2026</p>
+
+      <div class="site-footer__badge" role="note">
+        <span class="site-footer__badge-text">Středoškolská Odborná Činnost 2026</span>
+      </div>
+
+      <address class="site-footer__info">
+        Projekt: <strong>BODY GUARD</strong> &nbsp;·&nbsp; 
+        Engine: <strong>Godot&nbsp;4.6.1</strong> &nbsp;·&nbsp; 
+        Platforma: <strong>PC</strong><br />
+        
+        Kontakt: 
+        <a href="mailto:ondra@glacner.cz" 
+           title="Pošli zprávu autorovi">
+          ondra@glacner.cz
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/vas-github"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Otevřít GitHub (nová záložka)">
+          GitHub
+        </a>
+      </address>
+
+      <p class="site-footer__copy">
+        Vytvořeno se&nbsp;<span class="heart-beat">♥</span> a&nbsp;hodně kofeinu
+        · © 2026 BODY GUARD SOČ Project
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════
+       JAVASCRIPT — defer pro non-blocking
+  ═══════════════════════════════ -->
+  <script src="JavaScript/script.js" defer></script>
+
+</body>
+</html>

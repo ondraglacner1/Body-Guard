@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0005" />
+  <meta name="color-scheme" content="dark" />
+  
+  <title>BODY GUARD | 3D Hra o Srdci</title>
+  <meta name="description" content="3D voxel hra v Godotu o&nbsp;imunitním systému. Hraješ za bílou krvinku – prozkoumávej srdce, těž a&nbsp;bojuj s&nbsp;viry. Edukativní projekt SOČ 2026." />
+  
+  <link rel="canonical" href="https://body-guard-soc.cz/" />
+
+  <meta property="og:title" content="BODY GUARD – Hra uvnitř srdce | SOČ 2026" />
+  <meta property="og:description" content="3D voxel hra o&nbsp;imunitním systému. Hraješ za bílou krvinku – zachraň nemocnou holčičku. Edukativní projekt SOČ 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://body-guard-soc.cz/" />
+  <meta property="og:image" content="https://body-guard-soc.cz/og-image.png" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BODY GUARD – Hra uvnitř srdce | SOČ 2026" />
+  <meta name="twitter:description" content="Zachraň holčičku – boj s&nbsp;viry, těž organické materiály, buduj obrany. Edukativní 3D hra." />
+  <meta name="twitter:image" content="https://body-guard-soc.cz/og-image.png" />
+
+  <meta name="author" content="Ondra Glacner" />
+  <meta name="keywords" content="biologie, 3D hra, edukace, SOČ, Godot, voxel, srdce, krvinky, imunitní systém" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preload" 
+        href="fonts/subset-RussoOne-Regular.woff2"  
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/Orbitron-Regular.woff2"         
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-Inter-Regular.woff2"     
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Regular.woff2" 
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Bold.woff2"    
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🫀%3C/text%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ctext y='1em' font-size='160'%3E🫀%3C/text%3E%3C/svg%3E" />
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BODY GUARD",
+    "url": "https://body-guard-soc.cz",
+    "description": "BODY GUARD je interaktivní 3D hra o imunitním systému. Projekt Středoškolské odborné činnosti 2026.",
+    "inLanguage": "cs",
+    "creator": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BODY GUARD",
+    "alternateName": "BODY GUARD SOČ 2026",
+    "description": "Bioedukační 3D voxel hra – Zachraň nemocnou holčičku! Prozkoumávej srdce, těž materiály, bojuj s&nbsp;viry, bakteriemi a&nbsp;nádorovými buňkami.",
+    "applicationCategory": ["GameApplication", "EducationalApplication"],
+    "operatingSystem": "Web (WebGL/PC)",
+    "url": "https://body-guard-soc.cz",
+    "image": "https://body-guard-soc.cz/og-image.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CZK",
+      "availability": "https://schema.org/InStock"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Ondra Glacner",
+      "url": "https://body-guard-soc.cz/vyvojar.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Středoškolská odborná činnost"
+    },
+    "genre": ["Educational Games", "Biology Games", "Strategy"],
+    "featureList": [
+      "3D Voxel Graphics",
+      "Mining System",
+      "Tower Building",
+      "Crafting System",
+      "AI Enemies",
+      "Educational Mode",
+      "Health System"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="CSS/style.css" />
+
+</head>
+
+<body>
+
+  <a href="#main-content"
+      class="skip-to-main"
+      style="
+        position: absolute;
+        top: -100%;
+        left: 1rem;
+        background: var(--accent);
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        font-weight: 700;
+        z-index: 9999;
+        text-decoration: none;
+        transition: top 0.2s ease;
+      "
+      onfocus="this.style.top='1rem'"
+      onblur="this.style.top='-100%'"
+  >Přeskočit na obsah</a>
+  <header class="site-header" id="siteHeader" aria-label="Hlavička webu">
+    <div class="site-header__inner">
+
+      <a href="index.html" 
+         class="site-header__logo" 
+         aria-label="BODY GUARD – Domů"
+         title="BODY GUARD – Domů">
+        BODY GUARD
+      </a>
+
+      <nav class="site-nav" 
+           id="siteNav"
+           aria-label="Hlavní navigace">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" 
+               class="site-nav__link" 
+               title="Domů">
+              Domů
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="o-hre.html" 
+               class="site-nav__link"
+               title="Přečti si více o hře">
+              O hře
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="mechaniky.html" 
+               class="site-nav__link"
+               title="Jak se hra hraje">
+              Mechaniky
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvoj.html" 
+               class="site-nav__link"
+               title="Stav vývoje projektu">
+              Vývoj
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="media.html" 
+               class="site-nav__link"
+               title="Screenshoty a videa">
+              Média
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="edukace.html" 
+               class="site-nav__link"
+               title="Vzdělávací aspekt hry">
+              Edukace
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvojar.html" 
+               class="site-nav__link"
+               title="Informace o vývojáři">
+              Vývojář
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <button class="hamburger"
+              id="hamburger"
+              type="button"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Otevřít navigační menu">
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <section class="hero" 
+             aria-labelledby="hero-title"
+             aria-label="Úvod do projektu">
+
+      <div class="hero__pulse-ring" aria-hidden="true"></div>
+      <div class="hero__pulse-ring" aria-hidden="true"></div>
+      <div class="hero__pulse-ring" aria-hidden="true"></div>
+
+      <div class="hero__particles" 
+           id="particles" 
+           aria-hidden="true"
+           role="presentation"></div>
+
+      <p class="hero__eyebrow">
+        Středoškolská odborná činnost · Godot 4 · Voxel 3D
+      </p>
+
+      <h1 class="hero__title" id="hero-title">BODY GUARD</h1>
+
+      <p class="hero__subtitle">INSIDE THE HUMAN HEART</p>
+
+      <svg class="hero__heartbeat"
+           viewBox="0 0 400 60"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true"
+           role="presentation">
+        <path class="heartbeat-path"
+              d="M0,30 L150,30 L162,30 L172,12 L184,50 L194,4 L206,56 L216,30 L228,30 L400,30" />
+      </svg>
+
+      <p class="hero__description">
+        Staň se poslední linií obrany v&nbsp;lidském těle. Jako <strong>bílá krvinka</strong> prozkoumávej srdce, 
+        těž suroviny a&nbsp;buduj obranu proti smrtícím virům i&nbsp;rakovině. – 
+        Každé tvé rozhodnutí rozhodne o&nbsp;osudu <strong>nemocné holčičky</strong>.
+      </p>
+
+      <nav class="hero__cta" 
+           aria-label="Hlavní akce">
+        <a href="o-hre.html" 
+           class="btn btn--primary"
+           title="Zjisti více o hře BODY GUARD">
+          Prozkoumat projekt
+        </a>
+        <a href="vyvoj.html" 
+           class="btn btn--secondary"
+           title="Podívej se na aktuální stav vývoje">
+          Deník vývoje
+        </a>
+      </nav>
+
+      <ul class="hero__stats"
+          aria-label="Klíčové statistiky projektu">
+        <li class="stat">
+          <strong class="stat__value">~&nbsp;1&nbsp;rok</strong>
+          <span class="stat__label">Vývoj</span>
+        </li>
+        <li class="stat">
+          <strong class="stat__value">Godot 4</strong>
+          <span class="stat__label">Engine</span>
+        </li>
+        <li class="stat">
+          <strong class="stat__value">Voxel 3D</strong>
+          <span class="stat__label">Grafika</span>
+        </li>
+        <li class="stat">
+          <strong class="stat__value">50/50</strong>
+          <span class="stat__label">Edu / Zábava</span>
+        </li>
+      </ul>
+
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <section class="page-section" aria-labelledby="about-title">
+      <span class="section-label reveal">O projektu</span>
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="about-title">
+          Hra, která tě <span class="section-title__highlight">učí zevnitř</span>
+        </h2>
+        <hr class="section-divider reveal" />
+      </div>
+
+      <p class="section-intro reveal">
+        <strong>BODY GUARD</strong> boří hranici mezi hrou a&nbsp;učebnicí. V&nbsp;pohlcujícím voxelovém světě se anatomie a&nbsp;biologie stávají přirozeným nástrojem k&nbsp;přežití. Neučíte se o&nbsp;imunitě – <strong>vy jí přímo jste</strong>.
+      </p>
+
+      <ul class="features-grid">
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Survival &amp; Akce</h3>
+          <p class="card__text">
+            Nestačí jen střílet. Musíte strategicky těžit suroviny a&nbsp;budovat obranné věže. Každá vteřina váhání dává patogenům šanci zvítězit nad&nbsp;organismem.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Vzdělávání hrou</h3>
+          <p class="card__text">
+            Každý nepřítel je reálný patogen, každá surovina má vědecký základ. Zapomeňte na biflování – ve hře pochopíte principy těla skrze akci.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Projekt SOČ 2026</h3>
+          <p class="card__text">
+            Technicky zaměřený projekt pro Středoškolskou odbornou činnost. Samostatný vývoj, vlastní voxelové modely a&nbsp;komplexní systémy v&nbsp;Godot Enginu.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Voxel-art styl</h3>
+          <p class="card__text">
+            Barevné a&nbsp;živé prostředí lidského srdce vytvořené v&nbsp;MagicaVoxel. Proudění krvinek a&nbsp;pohyb tkání zajišťují dynamické GPU částice.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Godot 4.6.1</h3>
+          <p class="card__text">
+            Využití špičkového open-source enginu. Od pokročilé AI nepřátel až po procedurální animace a&nbsp;optimalizovaný rendering pro web i&nbsp;PC.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Obtížnost = diagnóza</h3>
+          <p class="card__text">
+            Vaším nepřítelem není jen algoritmus, ale reálná diagnóza. Od běžné infekce po agresivní rakovinu – typ nemoci definuje brutalitu herního zážitku.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <section class="page-section page-section--tinted" aria-labelledby="loop-title" aria-label="Herní smyčka a postup">
+  <span class="section-label reveal">Jak se hraje</span>
+  <div class="section-title-wrap">
+    <h2 class="section-title reveal" id="loop-title">
+      Herní <span class="section-title__highlight">smyčka</span>
+    </h2>
+    <hr class="section-divider reveal" role="presentation" />
+  </div>
+
+  <p class="section-intro reveal">
+    Každé sezení ve hře sleduje jednoduchou smyčku – 
+    <strong>průzkum → těžba → crafting → boj → postup</strong>. 
+    Každá zóna je těžší a&nbsp;komplexnější než ta předchozí.
+  </p>
+
+  <ol class="loop-grid reveal" aria-label="Pět kroků herní smyčky">
+    <li class="loop-step">
+      <span class="loop-step__number" aria-hidden="true">01</span>
+      <h3 class="loop-step__title">Průzkum</h3>
+      <p class="loop-step__desc">Prozkoumáváš srdeční komoru, nacházíš suroviny a&nbsp;nepřátele.</p>
+    </li>
+
+    <li class="loop-arrow" aria-hidden="true">→</li>
+
+    <li class="loop-step">
+      <span class="loop-step__number" aria-hidden="true">02</span>
+      <h3 class="loop-step__title">Těžba</h3>
+      <p class="loop-step__desc">Těžíš bloky ze stěn – cholesterol, plak, svalová tkáň.</p>
+    </li>
+
+    <li class="loop-arrow" aria-hidden="true">→</li>
+
+    <li class="loop-step">
+      <span class="loop-step__number" aria-hidden="true">03</span>
+      <h3 class="loop-step__title">Crafting</h3>
+      <p class="loop-step__desc">Kombinuješ suroviny do zbraní, věží a&nbsp;léků v&nbsp;inventáři.</p>
+    </li>
+
+    <li class="loop-arrow" aria-hidden="true">→</li>
+
+    <li class="loop-step">
+      <span class="loop-step__number" aria-hidden="true">04</span>
+      <h3 class="loop-step__title">Boj</h3>
+      <p class="loop-step__desc">Útočíš na patogeny, stavíš věže a&nbsp;bráníš srdeční tkáň.</p>
+    </li>
+
+    <li class="loop-arrow" aria-hidden="true">→</li>
+
+    <li class="loop-step">
+      <span class="loop-step__number" aria-hidden="true">05</span>
+      <h3 class="loop-step__title">Postup</h3>
+      <p class="loop-step__desc">Přecházíš do další zóny – každá je těžší a&nbsp;komplexnější.</p>
+    </li>
+  </ol>
+</section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <section class="page-section" 
+             aria-labelledby="cta-title"
+             aria-label="Další navigace"
+             style="text-align: center; max-width: 700px;">
+
+      <span class="section-label reveal" 
+            style="border-left: none; padding-left: 0; display: block; text-align: center;">
+        Chceš vědět víc?
+      </span>
+
+      <h2 class="section-title reveal" 
+          id="cta-title"
+          style="text-align: center;">
+        Prozkoumej <span class="section-title__highlight">celý projekt</span>
+      </h2>
+
+      <hr class="section-divider reveal" 
+           role="presentation"
+           style="margin-left: auto; margin-right: auto;" />
+
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 2rem;" class="reveal">
+        Od herních mechanik přes vývojový deník až po vědecký základ – 
+        vše je podrobně zdokumentováno na tomto webu.
+      </p>
+
+      <nav class="hero__cta reveal" 
+           aria-label="Odkaz na podstránky">
+        <a href="o-hre.html" 
+           class="btn btn--primary"
+           title="Přečti si více o hře">
+          O hře
+        </a>
+        <a href="mechaniky.html" 
+           class="btn btn--secondary"
+           title="Jaké jsou herní mechaniky">
+          Mechaniky
+        </a>
+        <a href="edukace.html" 
+           class="btn btn--secondary"
+           title="Vzdělávací aspekt hry">
+          Edukace
+        </a>
+      </nav>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Patička webu">
+    <div class="site-footer__inner">
+
+      <a href="index.html" 
+         class="site-footer__logo" 
+         aria-label="BODY GUARD – Domů"
+         title="Domů">
+        BODY GUARD
+      </a>
+
+      <p class="site-footer__tagline">Inside the Human Heart · SOČ 2026</p>
+
+      <div class="site-footer__badge" role="note">
+        <span class="site-footer__badge-text">Středoškolská odborná činnost 2026</span>
+      </div>
+
+      <address class="site-footer__info">
+        Projekt: <strong>BODY GUARD</strong> &nbsp;·&nbsp; 
+        Engine: <strong>Godot 4.6.1</strong> &nbsp;·&nbsp; 
+        Platforma: <strong>PC</strong><br />
+        
+        Kontakt: 
+        <a href="mailto:ondra@glacner.cz" 
+           title="Pošli zprávu autorovi">
+          ondra@glacner.cz
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/vas-github"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Otevřít GitHub (nová záložka)">
+          GitHub
+        </a>
+      </address>
+
+      <p class="site-footer__copy">
+        Vytvořeno se <span class="heart-beat">♥</span> a&nbsp;hodně kofeinu
+        · © 2026 BODY GUARD SOČ Project
+      </p>
+
+    </div>
+  </footer>
+
+  <script src="JavaScript/script.js" defer></script>
+
+</body>
+</html>

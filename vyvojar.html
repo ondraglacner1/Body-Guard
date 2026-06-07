@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0005" />
+  <meta name="color-scheme" content="dark" />
+  
+  <!-- ═══════════════════════════════
+       TITLE & DESCRIPTION — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <title>O autorovi a projektu — BODY GUARD SOČ</title>
+  <meta name="description" content="Poznej Ondru Glacnera, solo vývojáře hry BODY GUARD. Zjisti více o propojení 3D herního vývoje v Godotu s biologií lidského těla." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical — SPECIFICKÉ PRO TUTO STRÁNKU -->
+  <link rel="canonical" href="https://body-guard-soc.cz/vyvojar.html" />
+
+  <!-- ═══════════════════════════════
+       SOCIÁLNÍ SÍTĚ — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <meta property="og:title" content="O autorovi a projektu — BODY GUARD SOČ" />
+  <meta property="og:description" content="Kdo stojí za hrou BODY GUARD? Poznej solo vývojáře, použitý technologický stack (Godot, GDScript) a pozadí vzniku projektu." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://body-guard-soc.cz/vyvojar.html" />
+  <meta property="og:image" content="https://body-guard-soc.cz/og-image.png" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="O autorovi a projektu — BODY GUARD SOČ" />
+  <meta name="twitter:description" content="Poznej vývojáře hry BODY GUARD. Spojení programování v Godot engine, voxelové grafiky a medicínských dat." />
+  <meta name="twitter:image" content="https://body-guard-soc.cz/og-image.png" />
+
+  <!-- SEO Meta -->
+  <meta name="author" content="Ondra Glacner" />
+  <meta name="keywords" content="vývojář, Godot, GDScript, game development, solo developer, voxel, 3D, indie hra, SOČ autor" />
+
+  <!-- ═══════════════════════════════
+       OPTIMALIZACE
+  ═══════════════════════════════ -->
+  <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ═══════════════════════════════
+       KRITICKÉ FONTY — PRELOAD
+  ═══════════════════════════════ -->
+  <link rel="preload" 
+        href="fonts/subset-RussoOne-Regular.woff2"  
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link class="preload" 
+        href="fonts/Orbitron-Regular.woff2"         
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-Inter-Regular.woff2"     
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Regular.woff2" 
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Bold.woff2"    
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><text y='1em' font-size='160'>🫀</text></svg>" />
+
+  <!-- ═══════════════════════════════
+       STRUKTUROVANÁ DATA (Schema.org JSON-LD)
+  ═══════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BODY GUARD",
+    "url": "https://body-guard-soc.cz",
+    "description": "BODY GUARD je interaktivní 3D hra o imunitním systému. Projekt Středoškolské odborné činnosti 2026.",
+    "inLanguage": "cs",
+    "creator": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vývojář — BODY GUARD",
+    "url": "https://body-guard-soc.cz/vyvojar.html",
+    "description": "Informace o vývojáři hry BODY GUARD — solo developerovi, studentu SOČ.",
+    "inLanguage": "cs",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "BODY GUARD",
+      "url": "https://body-guard-soc.cz"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ondřej Glacner",
+    "jobTitle": "Game Developer & Researcher",
+    "url": "https://body-guard-soc.cz/vyvojar.html",
+    "sameAs": [
+      "https://github.com/ondra-glacner"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "BODY GUARD SOČ Project"
+    }
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       ♿ SKIP-TO-CONTENT — OPRAVENÝ PRŮCHOD SÍTÍ
+  ═══════════════════════════════ -->
+  <a href="#main-content"
+     class="skip-to-main"
+     style="
+       position: absolute;
+       top: -100%;
+       left: 1rem;
+       background: var(--accent);
+       color: #000;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-family: var(--font-mono);
+       font-size: 0.85rem;
+       font-weight: 700;
+       z-index: 9999;
+       text-decoration: none;
+       transition: top 0.2s ease;
+     "
+     onfocus="this.style.top='1rem'"
+     onblur="this.style.top='-100%'"
+  >Přeskočit na obsah</a>
+
+  <!-- ═══════════════════════════════
+       HEADER s NAVIGACÍ
+  ═══════════════════════════════ -->
+  <header class="site-header" id="siteHeader" aria-label="Hlavička webu">
+    <div class="site-header__inner">
+
+      <a href="index.html" 
+         class="site-header__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="BODY GUARD — Domů">
+        BODY GUARD
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Hlavní navigace">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link" title="Domů">Domů</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="o-hre.html" class="site-nav__link" title="Přečti si více o hře">O&nbsp;hře</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="mechaniky.html" class="site-nav__link" title="Jak se hra hraje">Mechaniky</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="vyvoj.html" class="site-nav__link" title="Stav vývoje projektu">Vývoj</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="media.html" class="site-nav__link" title="Screenshoty a videa">Media</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="edukace.html" class="site-nav__link" title="Vzdělávací aspekt hry">Edukace</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="vyvojar.html" 
+               class="site-nav__link site-nav__link--active"
+               aria-current="page"
+               title="Informace o vývojáři">
+              Vývojář
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="hamburger"
+              id="hamburger"
+              type="button"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Otevřít navigační menu">
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════
+       HLAVNÍ OBSAH
+  ═══════════════════════════════ -->
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <!-- HERO SEKCE -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="page-hero__eyebrow">Tým za&nbsp;projektem</p>
+      <h1 class="page-hero__title" id="page-title">
+        O&nbsp;<span class="highlight">vývojáři</span>
+      </h1>
+      <p class="page-hero__description">
+        Celý projekt BODY GUARD stojí za&nbsp;jedním člověkem —<br />
+        středoškolským studentem s&nbsp;vášní pro&nbsp;<strong>hry</strong> a&nbsp;<strong>biologii</strong>.
+      </p>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- PROFIL VÝVOJÁŘE -->
+    <section class="page-section" aria-labelledby="dev-title">
+      <span class="section-label reveal">Solo developer</span>
+
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="dev-title">
+          Kdo za&nbsp;tím <span class="section-title__highlight">stojí</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+
+      <article class="dev-card reveal" aria-labelledby="dev-name">
+        <div class="dev-card__body">
+          <h3 class="dev-card__name" id="dev-name">Ondřej Glacner</h3>
+          <span class="dev-card__role">Solo Developer&nbsp;· Game Designer&nbsp;· Researcher</span>
+
+          <p class="dev-card__bio">
+            Celý projekt BODY GUARD vyvíjím <strong>zcela samostatně</strong> v&nbsp;rámci Středoškolské 
+            odborné činnosti (SOČ). To, co&nbsp;začalo jako ambiciózní vize, se&nbsp;po&nbsp;roce intenzivního 
+            vývoje proměnilo v&nbsp;<strong>technicky pokročilý prototyp</strong>, který propojuje 
+            svět her a&nbsp;vědy.
+          </p>
+          <p class="dev-card__bio">
+            Projekt reflektuje mou vášeň pro&nbsp;<strong>game development</strong> a&nbsp;hluboký 
+            zájem o&nbsp;<strong>biologii a&nbsp;medicínu</strong>. Mým cílem je&nbsp;demonstrovat, 
+            že&nbsp;vzdělávací hry mohou nabídnout srovnatelný zážitek jako komerční tituly, 
+            přičemž si&nbsp;zachovávají vysokou edukační hodnotu.
+          </p>
+
+          <ul class="dev-card__tech" role="list" aria-label="Klíčové zaměření projektu">
+            <li class="tech-badge">Godot 4.6.1</li>
+            <li class="tech-badge">GDScript</li>
+            <li class="tech-badge">MagicaVoxel</li>
+            <li class="tech-badge">Voxel 3D</li>
+            <li class="tech-badge">GPU Particles</li>
+            <li class="tech-badge">NavigationMesh</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- TECHNOLOGICKÝ STACK -->
+    <section class="page-section page-section--tinted" aria-labelledby="tech-title">
+      <span class="section-label reveal">Stack</span>
+
+      <div class="section-title-wrap">
+        <h2 class="section-title reveal" id="tech-title">
+          Použité <span class="section-title__highlight">technologie</span>
+        </h2>
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+
+      <p class="section-intro reveal">
+        Celý projekt je&nbsp;postaven na&nbsp;<strong>open-source nástrojích</strong>&nbsp;— 
+        od&nbsp;herního enginu přes 3D grafiku až&nbsp;po&nbsp;hosting webové dokumentace. 
+        Zvolený stack byl vybrán s&nbsp;ohledem na&nbsp;vysoký výkon, modularitu a&nbsp;efektivitu solo vývoje.
+      </p>
+
+      <ul class="features-grid" role="list" aria-label="Seznam použitých technologií">
+        <li class="card card--lined reveal">
+          <h3 class="card__title">Godot 4.6.1</h3>
+          <p class="card__text">
+            Moderní open-source engine zajišťující veškeré klíčové aspekty hry&nbsp;— 
+            od&nbsp;pokročilé fyziky a&nbsp;autonomní AI až&nbsp;po&nbsp;intuitivní uživatelské rozhraní.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">GDScript</h3>
+          <p class="card__text">
+            Nativní skriptovací jazyk enginu. Umožňuje rychlé prototypování mechanik 
+            při&nbsp;zachování čistoty a&nbsp;vysoké čitelnosti zdrojového kódu.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">MagicaVoxel</h3>
+          <p class="card__text">
+            Všechny 3D modely&nbsp;— od&nbsp;mikroskopických patogenů po&nbsp;struktury srdce&nbsp;— 
+            grahicky sjednoceny v&nbsp;tomto editoru pro&nbsp;dobažení unikátního retro-futuristického stylu.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">GPU Particles</h3>
+          <p class="card__text">
+            Využití výpočetního výkonu grafické karty k&nbsp;simulaci tisíců částic v&nbsp;krevním řečišti, 
+            což vytváří živé prostředí bez&nbsp;zbytečného zatížení procesoru.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">NavigationMesh</h3>
+          <p class="card__text">
+            Pokročilý systém pro&nbsp;pathfinding, který patogenům umožňuje inteligentně 
+            reagovat na&nbsp;změny v&nbsp;procedurálně generovaném prostředí.
+          </p>
+        </li>
+
+        <li class="card card--lined reveal">
+          <h3 class="card__title">GitHub Pages</h3>
+          <p class="card__text">
+            Zajišťuje rychlý a&nbsp;transparentní hosting dokumentace. Celý vývojový cyklus 
+            je&nbsp;tak dostupný odborné komisi SOČ i&nbsp;široké veřejnosti.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- KONTAKTNÍ SEKCE -->
+    <section class="page-section" 
+             aria-labelledby="contact-title"
+             style="max-width: 700px; text-align: center; margin-left: auto; margin-right: auto;">
+      
+      <span class="section-label reveal" style="border-left: none; padding-left: 0; display: block; text-align: center;">
+        Spojení
+      </span>
+
+      <h2 class="section-title reveal" id="contact-title" style="text-align: center;">
+        <span class="section-title__highlight">Kontakt</span>
+      </h2>
+
+      <hr class="section-divider reveal" role="presentation" style="margin-left: auto; margin-right: auto;" />
+
+      <div class="card reveal" style="padding: 3rem;">
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 2rem;">
+          Máš zájed o&nbsp;projekt, chceš se&nbsp;poradit nebo
+          jen vyjádřit podporu vývoji? Napiš mi!
+        </p>
+
+        <address style="font-style: normal; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <a href="mailto:ondra@glacner.cz" 
+             class="btn btn--primary"
+             title="Pošli e-mail autorovi"
+             style="display: inline-flex;">
+            ondra@glacner.cz
+          </a>
+          <a href="https://github.com/ondra-glacner"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn--secondary"
+             title="Otevřít GitHub repozitář (nová záložka)"
+             style="display: inline-flex;">
+            GitHub repozitář projektu
+          </a>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════
+       FOOTER
+  ═══════════════════════════════ -->
+  <footer class="site-footer" aria-label="Patička webu">
+    <div class="site-footer__inner">
+
+      <a href="index.html" 
+         class="site-footer__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="Domů">
+        BODY GUARD
+      </a>
+
+      <p class="site-footer__tagline">Inside the Human Heart · SOČ 2026</p>
+
+      <div class="site-footer__badge" role="note">
+        <span class="site-footer__badge-text">Středoškolská odborná činnost 2026</span>
+      </div>
+
+      <address class="site-footer__info">
+        Projekt: <strong>BODY GUARD</strong> &nbsp;·&nbsp; 
+        Engine: <strong>Godot 4.6.1</strong> &nbsp;·&nbsp; 
+        Platforma: <strong>PC</strong><br />
+        
+        Kontakt: 
+        <a href="mailto:ondra@glacner.cz" title="Pošli zprávu autorovi">
+          ondra@glacner.cz
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/ondra-glacner"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Otevřít GitHub profil autora (nová záložka)">
+          GitHub profil autora
+        </a>
+      </address>
+
+      <p class="site-footer__copy">
+        Vytvořeno se&nbsp;<span class="heart-beat" aria-label="láskou">♥</span> a&nbsp;hodně kofeinu
+        &nbsp;·&nbsp; © 2026 BODY GUARD SOČ Project
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="JavaScript/script.js" defer></script>
+</body>
+</html>

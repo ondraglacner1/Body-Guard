@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0005" />
+  <meta name="color-scheme" content="dark" />
+  
+  <!-- ═══════════════════════════════
+       TITLE & DESCRIPTION — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <title>BODY GUARD | Vývojový deník</title>
+  <meta name="description" content="Sledujte vývojový deník 3D hry BODY GUARD. Aktuální stav vývoje, hotové komponenty imunitního systému, herní mechaniky a budoucí plány v reálném čase." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical — SPECIFICKÉ PRO TUTO STRÁNKU -->
+  <link rel="canonical" href="https://body-guard-soc.cz/vyvoj.html" />
+
+  <!-- ═══════════════════════════════
+       SOCIÁLNÍ SÍTĚ — SPECIFICKÉ PRO TUTO STRÁNKU
+  ═══════════════════════════════ -->
+  <meta property="og:title" content="Vývojový deník — BODY GUARD SOČ" />
+  <meta property="og:description" content="Sleduj pokrok vývoje 3D hry BODY GUARD. Co je hotovo, co se právě vyvíjí a jaké funkce teprve přibudou." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://body-guard-soc.cz/vyvoj.html" />
+  <meta property="og:image" content="https://body-guard-soc.cz/og-image.png" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vývojový deník — BODY GUARD SOČ" />
+  <meta name="twitter:description" content="Pokročilý vývoj hry o imunitním systému, AI nepřátel, crafting a komplexní roadmapa projektu." />
+  <meta name="twitter:image" content="https://body-guard-soc.cz/og-image.png" />
+
+  <!-- SEO Meta -->
+  <meta name="author" content="Ondra Glacner" />
+  <meta name="keywords" content="vývoj, devlog, godot, progress, game development, roadmap, imunitní systém, edukativní hra, SOČ" />
+
+  <!-- ═══════════════════════════════
+       OPTIMALIZACE
+  ═══════════════════════════════ -->
+  <link rel="dns-prefetch" href="https://github.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ═══════════════════════════════
+       KRITICKÉ FONTY — PRELOAD (bez CLS)
+  ═══════════════════════════════ -->
+  <link rel="preload" 
+        href="fonts/subset-RussoOne-Regular.woff2"  
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/Orbitron-Regular.woff2"         
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-Inter-Regular.woff2"     
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Regular.woff2" 
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+  
+  <link rel="preload" 
+        href="fonts/subset-SpaceMono-Bold.woff2"    
+        as="font" 
+        type="font/woff2" 
+        crossorigin="anonymous" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><text y='1em' font-size='160'>🫀</text></svg>" />
+
+  <!-- ═══════════════════════════════
+       STRUKTUROVANÁ DATA (Schema.org JSON-LD)
+  ═══════════════════════════════ -->
+  
+  <!-- WebSite — domovská stránka webu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BODY GUARD",
+    "url": "https://body-guard-soc.cz",
+    "description": "BODY GUARD je interaktivní 3D hra o imunitním systému. Projekt Středoškolské odborné činnosti 2026.",
+    "inLanguage": "cs",
+    "creator": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    }
+  }
+  </script>
+
+  <!-- WebPage — specifická stránka -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vývojová dokumentace — BODY GUARD",
+    "url": "https://body-guard-soc.cz/vyvoj.html",
+    "description": "Vývojový deník hry BODY GUARD — stav vývoje, hotové komponenty, aktuální práce a budoucí plány.",
+    "inLanguage": "cs",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "BODY GUARD",
+      "url": "https://body-guard-soc.cz"
+    }
+  }
+  </script>
+
+  <!-- SoftwareSourceCode / Project — vývoj projektu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "BODY GUARD — Game Source Code",
+    "description": "3D voxel hra v Godot 4.6.1 se zaměřením na biologii a edukaci",
+    "url": "https://body-guard-soc.cz/vyvoj.html",
+    "codeRepository": "https://github.com",
+    "programmingLanguage": ["GDScript", "GLSL"],
+    "downloadUrl": "https://github.com",
+    "inLanguage": "cs",
+    "author": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    },
+    "applicationCategory": "GameApplication",
+    "operatingSystem": ["Windows", "Linux", "macOS"]
+  }
+  </script>
+
+  <!-- BlogPosting — vývojový deník -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "name": "BODY GUARD — Vývojový Deník",
+    "description": "Průběžný záznam vývoje hry BODY GUARD — co je hotovo, co se právě vyvíjí a co teprve přijde.",
+    "url": "https://body-guard-soc.cz/vyvoj.html",
+    "author": {
+      "@type": "Person",
+      "name": "Ondra Glacner"
+    },
+    "datePublished": "2026-01-05",
+    "dateModified": "2026-05-28",
+    "inLanguage": "cs",
+    "articleBody": "Vývojový deník projektu BODY GUARD obsahuje informace o pokroku vývoje jednotlivých komponent, prioritách a plánovaných funkcích."
+  }
+  </script>
+
+  <!-- CSS — bez inline, pro lepší caching -->
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       ♿ SKIP-TO-CONTENT — WCAG 2.2 AA
+  ═══════════════════════════════ -->
+  <a href="#main-content"
+     class="skip-to-main"
+     style="
+       position: absolute;
+       top: -100%;
+       left: 1rem;
+       background: var(--accent);
+       color: #000;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-family: var(--font-mono);
+       font-size: 0.85rem;
+       font-weight: 700;
+       z-index: 9999;
+       text-decoration: none;
+       transition: top 0.2s ease;
+     "
+     onfocus="this.style.top='1rem'"
+     onblur="this.style.top='-100%'"
+  >Přeskočit na obsah</a>
+
+  <!-- ═══════════════════════════════
+       HEADER s NAVIGACÍ — F-PATTERN (top bar)
+  ═══════════════════════════════ -->
+  <header class="site-header" id="siteHeader" aria-label="Hlavička webu">
+    <div class="site-header__inner">
+
+      <!-- Logo / Home link -->
+      <a href="index.html" 
+         class="site-header__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="BODY GUARD — Domů">
+        BODY GUARD
+      </a>
+
+      <!-- Primární navigace — F-PATTERN (7 položek) -->
+      <nav class="site-nav" 
+           id="siteNav" 
+           aria-label="Hlavní navigace">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" 
+               class="site-nav__link"
+               title="Domů">
+              Domů
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="o-hre.html" 
+               class="site-nav__link"
+               title="Přečti si více o hře">
+              O&nbsp;hře
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="mechaniky.html" 
+               class="site-nav__link"
+               title="Jak se hra hraje">
+              Mechaniky
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvoj.html" 
+               class="site-nav__link site-nav__link--active"
+               aria-current="page"
+               title="Stav vývoje projektu">
+              Vývoj
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="media.html" 
+               class="site-nav__link"
+               title="Screenshoty a videa">
+              Media
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="edukace.html" 
+               class="site-nav__link"
+               title="Vzdělávací aspekt hry">
+              Edukace
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a href="vyvojar.html" 
+               class="site-nav__link"
+               title="Informace o vývojáři">
+              Vývojář
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ♿ Hamburger menu — 44x44px minimum -->
+      <button class="hamburger"
+              id="hamburger"
+              type="button"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Otevřít navigační menu">
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+        <span class="hamburger__line" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════
+       HLAVNÍ OBSAH — Z-PATTERN
+  ═══════════════════════════════ -->
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <!-- ─────────────────────────────
+         PAGE HERO — Z-PATTERN
+    ───────────────────────────────── -->
+    <section class="page-hero" 
+             aria-labelledby="page-title">
+
+      <!-- Z bod 1: eyebrow — kontext (nejmenší) -->
+      <p class="page-hero__eyebrow">
+        Vývojový deník
+      </p>
+
+      <!-- Z bod 2: H1 — dominantní prvek (největší) -->
+      <h1 class="page-hero__title" id="page-title">
+        Stav <span class="highlight">vývoje</span>
+      </h1>
+
+      <!-- Z diagonála: popis -->
+      <p class="page-hero__description">
+        Přehled toho, co už funguje, co se právě vyvíjí
+        a&nbsp;co teprve přijde. Projekt je <strong>v&nbsp;aktivním vývoji</strong>.
+      </p>
+    </section>
+
+    <hr class="section-separator" aria-hidden="true" />
+
+    <!-- ─────────────────────────────
+         PROGRESS SEKCE — F-PATTERN (asymetrická varianta)
+    ───────────────────────────────── -->
+    <section class="page-section" 
+             aria-labelledby="progress-title">
+
+      <!-- F bod 1: label s levým borderem = vizuální kotva oka -->
+      <span class="section-label reveal">Aktuální stav</span>
+      <div class="section-title-wrap">
+        <!-- F: H2 přes celou šířku = první vodorovná čára F -->
+        <h2 class="section-title reveal" id="progress-title">
+          Co je <span class="section-title__highlight">hotovo</span>
+        </h2>
+
+        <!-- F: divider vlevo = pokračování F kotvy -->
+        <hr class="section-divider reveal" role="presentation" />
+      </div>
+      <!-- F: intro přes celou šířku = prodloužení první čáry F -->
+      <p class="section-intro reveal">
+        Osm klíčových systémů se nachází v&nbsp;různých fázích vývoje –
+        od <strong>procedurálního generátoru srdeční komory</strong> až po <strong>zvukový design</strong>, 
+        který je na samém začátku. Detaily o&nbsp;plánovaných mechanikách najdeš v&nbsp;přehledu chystaných funkcí.
+      </p>
+
+      <!-- F: progress-layout = 2 sloupce -->
+      <div class="progress-layout">
+
+        <!-- ─────────────────────────────
+             LEVÝ SLOUPEC: HOTOVO — F KOTVA
+        ───────────────────────────────── -->
+        <div class="reveal">
+
+          <h3 class="progress-column__title progress-column__title--done">
+            Hotovo
+          </h3>
+
+          <!-- ── PROGRESS BAR 1: Generátor komory — 85% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Generátor komory</span>
+              <span class="progress-item__percent" aria-hidden="true">85%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="85"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Generátor komory: 85 %">
+              <div class="progress-bar__fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 2: Těžba / Dropy — 85% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Těžba / Dropy</span>
+              <span class="progress-item__percent" aria-hidden="true">85%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="85"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Těžba / Dropy: 85 %">
+              <div class="progress-bar__fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 3: Inventář — 60% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Inventář</span>
+              <span class="progress-item__percent" aria-hidden="true">60%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="60"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Inventář: 60 %">
+              <div class="progress-bar__fill" data-width="60"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 4: AI / Nepřátelé — 30% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">AI / Nepřátelé</span>
+              <span class="progress-item__percent" aria-hidden="true">30%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="30"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="AI / Nepřátelé: 30 %">
+              <div class="progress-bar__fill" data-width="30"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 5: UI / Menu — 25% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">UI / Menu</span>
+              <span class="progress-item__percent" aria-hidden="true">25%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="25"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="UI / Menu: 25 %">
+              <div class="progress-bar__fill" data-width="25"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 6: Gameplay smyčka — 20% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Gameplay smyčka</span>
+              <span class="progress-item__percent" aria-hidden="true">20%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="20"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Gameplay smyčka: 20 %">
+              <div class="progress-bar__fill" data-width="20"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 7: Crafting systém — 10% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Crafting systém</span>
+              <span class="progress-item__percent" aria-hidden="true">10%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="10"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Crafting systém: 10 %">
+              <div class="progress-bar__fill" data-width="10"></div>
+            </div>
+          </div>
+
+          <!-- ── PROGRESS BAR 8: Zvuk — 5% ── -->
+          <div class="progress-item">
+            <div class="progress-item__header">
+              <span class="progress-item__name">Zvuk</span>
+              <span class="progress-item__percent" aria-hidden="true">5%</span>
+            </div>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="5"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Zvuk: 5 %">
+              <div class="progress-bar__fill" data-width="5"></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /levý sloupec: Hotovo -->
+
+        <!-- ─────────────────────────────
+             PRAVÝ SLOUPEC: CHYSTÁ SE — F DRUHÝ SLOUPEC
+        ───────────────────────────────── -->
+        <div class="reveal">
+
+          <h3 class="progress-column__title progress-column__title--todo">
+            Chystá se
+          </h3>
+
+          <ul class="todo-list" aria-label="Plánované funkce a systémy">
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Crafting systém +&nbsp;UI rozhraní
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Plná AI chování nepřátel (útok, pathfinding)
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Boss fight mechaniky
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Více zón (pravá komora, síně, cévy)
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Přechody mezi zónami
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Win / Lose podmínky +&nbsp;mise
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Progression &amp; leveling systém
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Hlavní menu
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Mapa zón
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Tooltip pro předměty
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Zvuky těžby, srdeční tep, ambient
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Vzdělávací mód — vědecké texty
+            </li>
+
+            <li class="todo-list__item">
+              <span class="todo-list__icon" aria-hidden="true">+</span>
+              Online / local multiplayer <em>(výhled)</em>
+            </li>
+
+          </ul>
+        </div>
+        <!-- /pravý sloupec: Chystá se -->
+
+      </div>
+      <!-- /progress-layout -->
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════
+       FOOTER — Kontaktní informace a copyright
+  ═══════════════════════════════ -->
+  <footer class="site-footer" aria-label="Patička webu">
+    <div class="site-footer__inner">
+
+      <a href="index.html" 
+         class="site-footer__logo" 
+         aria-label="BODY GUARD — Domů"
+         title="Domů">
+        BODY GUARD
+      </a>
+
+      <p class="site-footer__tagline">Inside the Human Heart · SOČ 2026</p>
+
+      <div class="site-footer__badge" role="note">
+        <span class="site-footer__badge-text">Středoškolská odborná činnost 2026</span>
+      </div>
+
+      <address class="site-footer__info">
+        Projekt: <strong>BODY GUARD</strong> &nbsp;·&nbsp; 
+        Engine: <strong>Godot 4.6.1</strong> &nbsp;·&nbsp; 
+        Platforma: <strong>PC</strong><br />
+        
+        Kontakt: 
+        <a href="mailto:ondra@glacner.cz" 
+           title="Pošli zprávu autorovi">
+          ondra@glacner.cz
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/ondra-glacner"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Otevřít GitHub profil autora (nová záložka)">
+          GitHub profil autora
+        </a>
+      </address>
+
+      <p class="site-footer__copy">
+        Vytvořeno se <span class="heart-beat">♥</span> a&nbsp;hodně kofeinu
+        · © 2026 BODY GUARD SOČ Project
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════
+       JAVASCRIPT — defer pro non-blocking
+  ═══════════════════════════════ -->
+  <script src="JavaScript/script.js" defer></script>
+
+</body>
+</html>
